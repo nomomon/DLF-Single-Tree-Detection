@@ -5,21 +5,15 @@ _Left to right: Mansur (me), Lucien, Christian and Kasper._
 
 YOLOv8 segmentation for detecting individual trees in aerial imagery—*The Jurassic Bark: Single Tree Version*. Project from the **ENLIGHT Deep Learning in Forestry** course (Bordeaux, Groningen, Göttingen, Ghent).
 
----
-
 ## What’s in this repo
 
 We fine-tuned **YOLOv8-seg** on labeled tree data: tile images and masks, split into train/valid/test. The pipeline goes from raw tiles and masks (bronze) through preprocessing (silver) to a YOLO-ready dataset (gold). Training and inference are in `train.py` and `run.py`.
-
----
 
 ## Data and approach
 
 **Dataset:** Aerial imagery of **Göttingen** (urban city landscape), Spring 2018. 38 plots with masks, 4 bands (R, G, B, IR). Tiles are 1024×1024 px with 10 cm per pixel—so relatively small data and strong class imbalance. We use an infrared-inclusive band combo (IR, G, B) and separate individual trees in the masks with scikit-image (opening, erosion, labeling). Data augmentation (flip, zoom, 90° rotations, combinations) expands 38 large tiles into 2500+ smaller crops (e.g. 256×256) for training.
 
 **Why YOLOv8:** We considered U-Net-style models (e.g. MobileNetV2, pix2pix) but went with **YOLOv8 instance segmentation**: instance-level detection, whole-image processing in one pass, good with scale variation, and straightforward to train. Suited our “single tree” detection goal.
-
----
 
 ## How to run
 
@@ -36,14 +30,10 @@ pip install -r requirements.txt
 
 Notebooks in `notebooks/` contain the exploratory and pipeline work.
 
----
-
 ## Report and slides
 
 - **Report (Overleaf):** [Deep Learning in Forestry – Single Tree Detection](https://www.overleaf.com/project/65f9a9942034cbe82d2f0f99)
 - **Slides:** [Google Slides](https://docs.google.com/presentation/d/1T2WLoDb0O9FV899_YFf19go-xVM4eqg62-x0p6wY0io/edit?usp=sharing)
-
----
 
 ## Story
 
@@ -69,8 +59,6 @@ Our team (Mansur, Lucien, Christian, Kasper) built the data pipeline, trained YO
 ![Let's make a forest of reactions under this message](assets/whatsapp_reactions.png)
 
 Big thanks to the lecturers and organisers—Nils Nölke, Lutz Fehrmann, Jean-Christophe Taveau, Matias Valdenegro Toro, Andreea Sburlea and others—for a great course.
-
----
 
 ## Authors
 
