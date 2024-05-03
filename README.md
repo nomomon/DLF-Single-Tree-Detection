@@ -39,7 +39,9 @@ Notebooks in `notebooks/` contain the exploratory and pipeline work.
 
 This came out of the **ENLIGHT** course *Deep Learning in Forestry*, run by four universities—Bordeaux, Groningen, Göttingen, and Ghent.
 
-![ENLIGHT](assets/enlight_logo.png)
+<p align="center">
+  <img src="assets/enlight_logo.png" alt="ENLIGHT"/>
+</p>
 
 <p align="center">
   <img src="assets/uni_bordeaux.png" alt="Bordeaux" height="40"/>
@@ -52,11 +54,13 @@ Forests are a huge part of our ecosystems and the air we breathe, so monitoring 
 
 Our team (Mansur, Lucien, Christian, Kasper) built the data pipeline, trained YOLOv8 for segmentation, and presented the project on the last on-site day. Possible next steps: run the model over all of Göttingen, refine labeling, publish the dataset, and try it on other cities.
 
-![Project poster](assets/poster.jpeg)
-
-![Course group](assets/group_photo.jpeg)
-
-![Let's make a forest of reactions under this message](assets/whatsapp_reactions.png)
+<p align="center">
+  <img src="assets/poster.jpeg" alt="Project poster" width="45%"/>
+  <img src="assets/group_photo.jpeg" alt="Course group" width="45%"/>
+</p>
+<p align="center">
+  <img src="assets/whatsapp_reactions.png" alt="Let's make a forest of reactions under this message"/>
+</p>
 
 Big thanks to the lecturers and organisers—Nils Nölke, Lutz Fehrmann, Jean-Christophe Taveau, Matias Valdenegro Toro, Andreea Sburlea and others—for a great course.
 
